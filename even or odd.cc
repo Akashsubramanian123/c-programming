@@ -2,7 +2,7 @@
 int main()
 {
 	int N=101;
-	if(N==0)
+	if(N%2==0)
 	{
 		printf("The given number is even");
 	}
