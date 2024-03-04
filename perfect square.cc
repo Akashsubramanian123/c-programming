@@ -1,16 +1,19 @@
 #include<stdio.h>
 int main()
 {
-	int i,a=36,flag=0;
-	for(i=0;i<=a/2;i++)
+	int num=25,flag=0,i;
+	for(i=0;i<=num/2;i++)
 	{
-		if(a==i*i)
+		if(num==i*i)
 		{
-			printf("%d is a perfect square",a);
 			flag=1;
+			printf("The number %d is a perfect square",num);
+			break;
 		}
 	}
 	if(flag==0)
-	printf("%d is not a perfect square",a);
+	{
+		printf("The number %d is not a perfect square",num);
+	}
 	return 0;
 }
