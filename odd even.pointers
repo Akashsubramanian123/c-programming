@@ -1,0 +1,23 @@
+#include<stdio.h>
+int main()
+{
+    int array[]={1,2,3,4,5,6,7,8,9,10};
+    int *arrayPtr = array;
+    int arrayEven[10];
+    int *pEven = arrayEven;
+    int arrayOdd[10];
+    int * pOdd = arrayOdd;
+    int i;
+    for(i=0; i<10; i++)
+        {
+        if(array[i] %2 ==0)
+        {
+            printf("Even number %d\n",array[i]);
+        }
+        else
+        {
+            printf("Odd number %d\n",array[i]);
+        }
+    }
+  return 0;
+}
