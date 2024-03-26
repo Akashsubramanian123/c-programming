@@ -1,0 +1,34 @@
+#include <stdio.h>
+
+void sortArray(int *arr, int size) {
+    int *i, *j, temp;
+    
+    for (i = arr; i < arr + size - 1; i++) {
+        for (j = i + 1; j < arr + size; j++) {
+            if (*i > *j) {
+                temp = *i;
+                *i = *j;
+                *j = temp;
+            }
+        }
+    }
+}
+
+int main() {
+    int arr[] = {5, 2, 8, 1, 3};
+    int size = sizeof(arr) / sizeof(arr[0]);
+    
+    printf("Original Array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    sortArray(arr, size);
+    
+    printf("\nSorted Array: ");
+    for (int i = 0; i < size; i++) {
+        printf("%d ", arr[i]);
+    }
+    
+    return 0;
+}
